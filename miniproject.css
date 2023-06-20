@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    
+}
+body{   
+    max-width: 100%;
+    height: 100vh;
+    background-image:url(covercars.jpg);        
+    background-size:cover;
+    position:relative;
+    /* overflow: hidden; */
+}
+header{
+    width: 100%;
+    position: relative;
+    top: 0;left: 0; right: 0;
+    text-align: center;
+    align-items: center;
+    justify-content:space-between;
+    /* padding: 5px 7%; */
+    z-index: 1000;
+    margin-top: 0;
+    /* box-shadow: 0 5px 10px rgba(0,0,0,.1); */
+    
+}
+
+header .mag{
+    color: rgb(129, 158, 158);
+    text-decoration: none;
+    font-size: 75px;
+    font-family: verdana;
+    font-weight: bolder;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    font-size: medium;
+    position: relative;
+    background-color: black;
+    padding-left: 20px;
+}
+.nav ul{
+    display:inline-flex;
+    list-style: none;
+    align-items: center;
+    font-size: 25px;
+    
+}
+.nav ul li{
+    margin-right: 20px;
+    
+}
+.nav ul li a:hover{    
+    background: white;
+    color: black;
+}   
+.nav ul li ul{
+    position: absolute;
+    display: block;
+    background:white;
+    display: none;
+}
+
+.cars li a{
+    display:flex;
+    padding: 10px;
+    color: rgb(197, 57, 85);
+    font-size: medium;
+}    
+
+.nav ul li ul li{   
+    border-top: 1px solid black; 
+    width: 100%;  
+}
+header .mag:hover{
+    background-color: crimson;
+    color: aliceblue;
+}
+.nav ul li:hover > ul{
+    display: initial;
+} 
+.main{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height:100px;
+    padding: 1rem;
+    grid-gap: 10px; 
+}
+.main-month{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height:100px;
+    padding: 1rem;
+    grid-gap: 10px; 
+}
+.main-month h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-family:Georgia;
+    background-color: rgb(129, 158, 158);
+    border-radius: 50px;
+    height: 90px;
+    text-align: center;
+    position:sticky; 
+}
+.main-month p{
+    padding: 5px;
+    background-color: azure;
+    font-family: Georgia;
+    height: 100%;
+    border-radius: 25px;
+    margin: 10px;
+    text-align:center;
+    
+}
+/* .main-editor li h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    font-family:Georgia;
+    background-color: rgb(129, 158, 158);
+    border-radius: 50px;
+    height: 125px;
+    text-align: center;
+     
+} */
+.main h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-family:Georgia;
+    background-color: rgb(129, 158, 158);
+    border-radius: 50px;
+    height: 250px;
+    text-align: center;
+     
+
+}
+.main-container h1{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-family:Georgia;
+    background-color: rgb(129, 158, 158);
+    border-radius: 50px;
+    height: 300px;
+    text-align: center;
+    
+}
+.greet{
+    background-color: transparent;
+    color: azure;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-family:Georgia;
+
+}
+
+.l2 p{
+    
+    padding: 5px;
+    background-color: azure;
+    font-family: Georgia;
+    height: 100%;
+    border-radius: 25px;
+    margin: 10px;
+    text-align:center;
+    
+}
+
+.l1 h1{
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-family:Georgia;
+    background-color: rgb(129, 158, 158);
+    border-radius: 25px;
+    height: 250px;
+    text-align: left;
+    width: 220px;
+    
+}
+    
+@media(max-width:480px){
+    body{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        width: 100%;
+        position: relative;
+        top: 0;left: 0; right: 0;
+        background-color: white;
+        text-align: center;
+        align-items: center;
+        justify-content:space-between;
+        /* padding: 5px 7%; */
+        z-index: 1;
+        
+        box-shadow: 10px 10px 25px rgba(0,0,0,.1);
+    }
+    
+    header .mag{
+        color: rgb(129, 158, 158);
+        text-decoration: none;
+        font-size: 25px;
+        font-family: verdana;
+        font-weight: bolder;
+        width: 100%;
+        text-align: center;
+    }
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content:space-evenly;
+        font-size: 10px;
+        position: relative;
+    }
+    .nav ul{
+        display:inline-flex;
+        list-style: none;
+        align-items: center;
+        font-size: 15px;
+    }
+    .nav ul li{
+        margin-right: 20px;
+    }
+    .nav ul li a:hover{    
+        background: rgb(109, 109, 109);
+        color: aliceblue; 
+    }   
+    .nav ul li ul{
+        position: absolute;
+        display: block;
+        background:white;
+        display: none;
+    }
+    
+    .cars li a{
+        display:flex;
+        padding: 10px;
+        color: rgb(197, 57, 85);
+        font-size: medium;
+    }    
+    
+    .nav ul li ul li{   
+        border-top: 1px solid black; 
+        width: 100%;  
+    }
+    header .mag:hover{
+        background-color: crimson;
+        color: aliceblue;
+    }
+    .nav ul li:hover > ul{
+        display: initial;
+    } 
+    .l2{
+        display: block;
+        
+    }
+    .l1 h1{
+        display: flex;
+        width: 220px;
+        height: 500px;
+        font-size: smaller;
+    }
+}
