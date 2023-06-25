@@ -42,46 +42,63 @@ header .mag{
     font-size: medium;
     position: relative;
     background-color: black;
-    padding-left: 20px;
-    
+    padding-top: 10px;
 }
-.nav ul{
+.nav-list{
     display:inline-flex;
     list-style: none;
     align-items: center;
     font-size: 25px;
 }
-.nav ul li{
-    margin-right: 20px;
+.nav-list li{
+    margin: 10px;   
+} 
+.nav-list li a{
+    width: auto;
+    text-decoration: none;
 }
-.nav ul li a:hover{    
+.nav-list a.active{
+    background-color: aliceblue;
+}    
+.nav-list li a:hover{    
     background: white;
     color: black;
-    text-decoration: none;
+    text-decoration: none; 
 }   
-.nav ul li ul{
+.nav-list li ul{
     position: absolute;
     background:white;
     display: none;
     text-decoration: none;
 }
+.cars li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .cars li a{
-    display:flex;
+    width: 100%;
+    display:block;
     padding: 10px;
     color: rgb(197, 57, 85);
-    font-size: medium;    
+    font-size: medium;   
 }    
-.nav ul li ul li{   
-    border-top: 1px solid black; 
-    width: 100%;      
-}
 header .mag:hover{
     background-color: crimson;
     color: aliceblue;
 }
-.nav ul li:hover > ul{
+.nav-list li:hover > ul{
     display: initial;
 } 
+.journey{
+    padding-top: 10px;
+    padding-left: 5px;
+    font-family:Georgia;
+    background-color: rgb(129, 158, 158);
+    border-radius: 50px;
+    height: 45px;
+    text-align: center;
+}
 .main{
     color: black;
     display: grid;
@@ -97,7 +114,8 @@ header .mag:hover{
     height:100px;
     padding: 1rem;
     margin: 20;
-    grid-gap: 10px; 
+    grid-gap: 10px;
+    
 }
 .main-month h1{
     padding-top: 20px;
@@ -110,6 +128,7 @@ header .mag:hover{
     text-align: center;
     position:sticky;
     font-size: 30px;
+    
 }
 .main-month p{
     padding: 5px;
@@ -118,7 +137,8 @@ header .mag:hover{
     height: 100%;
     border-radius: 25px;
     margin: 10px;
-    text-align:center;    
+    text-align:center;
+    border: 2px solid black;    
 }
 .main-container h1{
     padding-top: 30px;
@@ -138,6 +158,13 @@ header .mag:hover{
     padding-bottom: 20px;
     padding-left: 10px;
     font-family:Georgia;
+}
+.greet p{
+    background-color: black;
+    color: azure; 
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;    
 }
 .l2 p{
     padding: 5px;
@@ -160,6 +187,20 @@ header .mag:hover{
     text-align: left;
     width: 220px; 
 }
+.l1 img{
+    border-radius: 50%;
+}
+.news-content{
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+    border: 2px solid black;
+    box-shadow: 5px 5px 20px black;
+}
+.news-content p{
+    font-family:Arial, Helvetica, sans-serif;
+}    
 .card-body{
     width: 100%;
     margin: 0;
@@ -178,7 +219,7 @@ header .mag:hover{
     height: 550px;
     margin: 5px;
     width: 400px;
-    box-shadow: 5px 5px 20px black;
+    box-shadow: 5px 5px 10px grey;
     overflow: hidden; 
 }
 .card img{
@@ -196,6 +237,9 @@ header .mag:hover{
     background: rgb(109, 109, 109 .6);
     color: rgb(0, 0, 0);  
 }
+.intro p{
+    font-family:Arial, Helvetica, sans-serif;
+}
 .card:hover{
     cursor: pointer;
 }
@@ -203,6 +247,16 @@ header .mag:hover{
     height:200px;
     bottom:200px;
     background: azure;
+}
+.r1 a{
+    color: black;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: cadetblue;
+    display: flex;
+    border-radius: 25px;
+    width: auto;
+    justify-content: center;
 }
 .footer{
     width: 100%;
@@ -222,19 +276,21 @@ header .mag:hover{
         width: 100%;
         padding: 0;
         margin: 0;
+        background-image: none;
+        background-color: rgb(129, 158, 158);
     }
     header{
         width: 100%;
         position:relative;
         top: 0;left: 0; right: 0;
-        background-color: white;
+        background-color: rgb(129, 158, 158);
         text-align: center;
         align-items: center;
         justify-content:space-between;
     }
     
     header .mag{
-        color: rgb(129, 158, 158);
+        color: crimson;
         text-decoration: none;
         font-size: 25px;
         font-family: verdana;
@@ -254,6 +310,7 @@ header .mag:hover{
         list-style: none;
         align-items: center;
         font-size: 15px;
+        padding: 0;
     }
     .nav ul li{
         margin-right: 20px;
@@ -293,18 +350,20 @@ header .mag:hover{
     }
     .l1 h1{
         display: flex;
-        width: 220px;
+        width: 200px;
         height: 500px;
-        font-size: smaller;
-    }
+        font-size:30px;
+
+    }    
     .footer{
         width:100%;
-        background-color: beige;
+        background-color:rgb(109, 109, 109);
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
         text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .xpander img{   
         margin-top: 200px;
@@ -312,7 +371,7 @@ header .mag:hover{
         align-self: center;
     }
     .statsmonth{
-        display:inline-block;   
+        display:block;  
     }
     .statsmonth h1{
         font-size:large;
@@ -321,6 +380,9 @@ header .mag:hover{
     .statsmonth p{
         overflow-wrap: break-word;
     }
+    .main{
+        display: flex;
+    }
     .main-container h1{
         padding-top: 30px;
         padding-bottom: 20px;
@@ -328,7 +390,7 @@ header .mag:hover{
         font-family:Georgia;
         background-color: rgb(129, 158, 158);
         border-radius: 50px;
-        height: 300px;
+        height: 150px;
         text-align: center;
         overflow-wrap:break-word;
     }
@@ -378,23 +440,24 @@ header .mag:hover{
         height: 90vh;
         align-items: center;
         background-color: azure;
-    
     }
     .card-container{
         display: flex;
+        margin-top: 0px;
+        height: 100%;
     }
     .card{
-        height: 250vh;
+        height: 1200px;
         margin: 5px;
         width: 200px;
         box-shadow: 5px 5px 20px black;
-        overflow: hidden;
+        padding-bottom: 10px;
     }
     .card img{
         width: 200px;
         height: 100px;
         border-radius: 3px;
-        margin-top: 520px;
+        margin-top: 20px;
     }
     .intro{
         height: 100px;
@@ -402,9 +465,32 @@ header .mag:hover{
         padding:5px;
         box-sizing: border-box;
         position:absolute;
-        margin-top: 620px;
+        margin-top: 120px;
         background: rgb(109, 109, 109 .6);
         color: rgb(0, 0, 0);  
         font-size: 13px;
+    }
+    .journey{
+        padding-top: 10px;
+        padding-left: 5px;
+        margin-left: 50px;
+        width: 250px;
+        font-family:Georgia;
+        background-color: rgb(129, 158, 158);
+        border-radius: 50px;
+        height: 45px;
+        text-align: center;
+        
+    }
+    .greet{
+        padding: 0;
+    }
+    .r1{
+        width: 200px;
+        background-color: rgb(129, 158, 158);
+    }
+    .main-editor{
+        padding: 0;
+        margin: 0;
     }
 }
